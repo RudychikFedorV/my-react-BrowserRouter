@@ -2,6 +2,8 @@ import React from "react";
 import myImage from "./img/logo.svg";
 import myImage1 from "./img/google.svg";
 import myImage2 from "./img/bg.png";
+import { Link } from 'react-router-dom'
+
 
 const Access = () => {
   return (
@@ -9,13 +11,13 @@ const Access = () => {
       <div className="Access__page">
         <div className="Access__logo">
           <div className="Access-logo__img">
-            <a href='/'>
+            <Link to={'/access'}>
               <img src={myImage} alt="Logo" />
-            </a>
+            </Link>
           </div>
-          <a href='/'>
+          <Link to={'/access'}>
             <div className="Access-logo__text">PNFT Market</div>
-          </a>
+          </Link>
         </div>
         <form className="Access-input">
           <div className="Access-input__title">NFT Access</div>
@@ -57,18 +59,18 @@ const Access = () => {
               <span className="Access-input__rememberMe">Remember me</span>
             </label>
             <div className="Access-input__forgotPassword">
-              <a href="/">Forgot Password?</a>
+              <Link to={'/access'}>Forgot Password?</Link>
             </div>
           </div>
-          <a href="/" className="Access-input__sing btn">
+          <Link to={'/access'} className="Access-input__sing btn">
             Sign in
-          </a>
+          </Link>
           <a href="https://www.google.com/" class="Access-input__google btn">
             <img src={myImage1} alt="Google" />
             <p className="Access-input__signGoogle">Sign in with Google</p>
           </a>
           <div className="Access-input__signUp">
-            <a href="/">Don’t have an account? Sign up</a>
+            <Link to={'/access'}>Don’t have an account? Sign up</Link>
           </div>
         </form>
         <div className="Access__footer">@CreatedbyNAMDesign</div>
