@@ -1,16 +1,8 @@
 .Access {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 32px;
-  gap: 100px;
-
-  @include desktop-small {
-    margin-bottom: 99px;
-    justify-content: center;
-    align-items: center;
-  }
-  
- 
+  gap: 156px;
 
   &__text {
     color: $accent2;
