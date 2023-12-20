@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import myImage1 from "../peges/img/google.svg";
 
 const Form = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  
+  const [passwordShow, setPasswordShow] = useState(false);
+  const changePasswordShow = () => {
+    setPasswordShow((e) => !e);
+  };
   return (
     <form className="Access-input">
       <div className="Access-input__title">NFT Access</div>
@@ -15,11 +22,12 @@ const Form = () => {
       <div className="Access-input__input">
         <input
           type="email"
-          id="mail"
-          name="email__name"
+          name="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           placeholder="debra.holt@example.com"
         />
-        <span class="material-icons" onclick="themeToggle()">
+        <span class="material-icons" onClick={() => setEmail("")}>
           highlight_off
         </span>
       </div>
@@ -27,8 +35,14 @@ const Form = () => {
         <label for="name">Password:</label>
       </div>
       <div className="Access-input__input">
-        <input type="password" name="userpass" placeholder="Userpass" />
-        <span className="material-icons" onclick="themeToggle()">
+        <input
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          type={passwordShow ? "email" : "password"}
+          name="userpass"
+          placeholder="Userpass"
+        />
+        <span className="material-icons" onClick={changePasswordShow}>
           visibility_off
         </span>
       </div>
