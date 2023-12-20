@@ -1,0 +1,27 @@
+.Access-footer {
+  &__text {
+    color: $accent2;
+    font: var(--Accent-2);
+    font-style: italic;
+    line-height: 20px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+  &__img {
+    // display: none;
+    width: 134px;
+    height: 5px;
+    flex-shrink: 0;
+    border-radius: 2.5px;
+    background: rgba(52, 64, 84, 0.85);
+
+    @include mobile {
+      display: block;
+      margin-inline: auto;
+    }
+  }
+}

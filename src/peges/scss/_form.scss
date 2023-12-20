@@ -1,0 +1,161 @@
+.Access-input {
+  margin-left: 108px;
+  flex-shrink: 0;
+  @include mobile {
+    margin-left: 0px;
+  }
+
+  &__title {
+    color: $secondaryColor;
+    font: var(--Headline);
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    @include mobile {
+      font: var(--Headline-2);
+    }
+  }
+  &__texts {
+    color: $accent2;
+    font: var(--Accent-2);
+    line-height: 24px;
+    margin-bottom: 56px;
+    @include mobile {
+      font: var(--Accent-1);
+    }
+  }
+  &__registration {
+    color: $secondaryColor;
+    font: var(--Text-2);
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+  &__input {
+    color: $accent2;
+    font: var(--Accent-2);
+    line-height: 24px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+  }
+  .material-icons {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    color: $accent2;
+  }
+  input[type="email"] {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 2px solid $white-1;
+  }
+  input[type="password"] {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 2px solid $white-1;
+  }
+  &__remember {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+  &__chk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  &__inp {
+    display: none;
+  }
+  &__inp:checked ~ &__check {
+    color: $white;
+    font-size: 16px;
+  }
+  &__inp:checked ~ &__check::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+  &__check::before {
+    content: "\2713";
+    color: $black;
+    transition: 0.2s all ease-in;
+    opacity: 0;
+    transform: scale(0);
+  }
+  &__check {
+    width: 16px;
+    height: 16px;
+    border: 2px solid $accent2;
+    border-radius: 4px;
+    background: transparent;
+    transition: 0.2s all ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__rememberMe {
+    color: $secondaryColor;
+    font: var(--Text-2);
+    line-height: 20px;
+    cursor: pointer;
+  }
+  &__forgotPassword {
+    color: $primaryColor;
+    font: var(--Text-2);
+    line-height: 20px;
+  }
+  &__sing {
+    color: $white;
+    font: var(--Text-3);
+    line-height: 20px;
+    background: $primaryColor;
+    padding: 12px;
+    margin-bottom: 16px;
+
+    &:hover {
+      background: lighten($primaryColor, 5%);
+    }
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $white-1;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  &__google {
+    padding: 10px;
+    gap: 8px;
+    margin-bottom: 20px;
+
+    &:hover {
+      background: lighten($accent2, 5%);
+    }
+  }
+  &__signGoogle {
+    color: $secondaryColor;
+    font: var(--Text-3);
+    line-height: 20px;
+  }
+  &__signUp {
+    color: $secondaryColor;
+    font: var(--Accent-1);
+    text-align: center;
+    line-height: 24px;
+    margin-bottom: 162px;
+    @include desktop-small {
+      margin-bottom: 99px;
+    }
+
+    @include mobile {
+      margin-bottom: 85px;
+    }
+  }
+}

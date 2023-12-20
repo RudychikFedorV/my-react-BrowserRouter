@@ -1,0 +1,14 @@
+.Access__img {
+    max-width: 736px;
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    
+    @include desktop-small {
+      display: none;
+    }
+     
+  }
